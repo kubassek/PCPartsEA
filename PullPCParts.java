@@ -25,9 +25,9 @@ public class PullPCParts {
         }
     }
 
-    private ArrayList<PC> pcPartsCPU = new ArrayList<PC>();
-    private ArrayList<PC> pcPartsGPU = new ArrayList<PC>();
-    private ArrayList<PC> pcPartsDrive = new ArrayList<PC>();
+    private ArrayList<PCParts> pcPartsCPU = new ArrayList<PCParts>();
+    private ArrayList<PCParts> pcPartsGPU = new ArrayList<PCParts>();
+    private ArrayList<PCParts> pcPartsDrive = new ArrayList<PCParts>();
 
     private ArrayList<String> fileLocations = new ArrayList<String>();
 
@@ -51,9 +51,9 @@ public class PullPCParts {
                     String[] partsCPU = line.split(cvsSplitBy);
                     String[] partsGPU = line.split(cvsSplitBy);
                     String[] partsDrive = line.split(cvsSplitBy);
-                    if(i==0) pcPartsCPU.add(new PC(partsCPU[0], Double.parseDouble(partsCPU[1]), Double.parseDouble(partsCPU[2])));
-                    if(i==1)pcPartsGPU.add(new PC(partsGPU[0], Double.parseDouble(partsGPU[1]), Double.parseDouble(partsGPU[2])));
-                    if(i==2)pcPartsDrive.add(new PC(partsDrive[0], Double.parseDouble(partsDrive[1]), Double.parseDouble(partsDrive[2])));
+                    if(i==0) pcPartsCPU.add(new PCParts(partsCPU[0], Double.parseDouble(partsCPU[1]), Double.parseDouble(partsCPU[2])));
+                    if(i==1)pcPartsGPU.add(new PCParts(partsGPU[0], Double.parseDouble(partsGPU[1]), Double.parseDouble(partsGPU[2])));
+                    if(i==2)pcPartsDrive.add(new PCParts(partsDrive[0], Double.parseDouble(partsDrive[1]), Double.parseDouble(partsDrive[2])));
                 }
             }
 

@@ -2,27 +2,34 @@ package com.company;
 
 public class PC {
 
-    public PC(String name, double performance, double price){
-        this.partName = name;
-        this.performace = performance;
-        this.price = price;
+    public PC(){
     }
 
-    // 1 = CPU 2 = GPU 3 = SSD/HDD
+    private PCParts cpu;
+    private PCParts gpu;
+    private PCParts drive;
 
-    private String partName;
-    private double performace;
-    private double price;
-
-    public String getPartName() {
-        return partName;
+    public PCParts getCpu() {
+        return cpu;
     }
 
-    public double getPerformace() {
-        return performace;
+    public void setCpu(PCParts cpu) {
+        this.cpu = cpu;
     }
 
-    public double getPrice() {
-        return price;
+    public PCParts getGpu() {
+        return gpu;
+    }
+
+    public void setGpu(PCParts gpu) {
+        this.gpu = gpu;
+    }
+
+    public PCParts getDrive() {
+        return drive;
+    }
+
+    public void setDrive(PCParts drive) {
+        this.drive = drive;
     }
 }

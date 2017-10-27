@@ -9,6 +9,10 @@ public class EALoop {
         this.mainLoop();
     }
 
+    public ArrayList<PCParts> possibleCpu = new ArrayList<PCParts>();
+    public ArrayList<PCParts> possibleGpu = new ArrayList<PCParts>();
+    public ArrayList<PCParts> possibleDrives = new ArrayList<PCParts>();
+
     public int evolutions;
     public int populationSize;
     public ArrayList<PC> population = new ArrayList<PC>();
