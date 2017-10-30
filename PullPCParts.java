@@ -10,24 +10,11 @@ public class PullPCParts {
 
     public PullPCParts(){
         this.readPartsData();
-
-        System.out.println("CPU ========================");
-        for(int i=0;i< pcPartsCPU.size();i++){
-            System.out.println(pcPartsCPU.get(i).getPartName() + " " + pcPartsCPU.get(i).getPerformace() + " " + pcPartsCPU.get(i).getPrice());
-        }
-        System.out.println("GPU ========================");
-        for(int i=0;i< pcPartsGPU.size();i++){
-            System.out.println(pcPartsGPU.get(i).getPartName() + " " + pcPartsGPU.get(i).getPerformace() + " " + pcPartsGPU.get(i).getPrice());
-        }
-        System.out.println("Drives ========================");
-        for(int i=0;i< pcPartsDrive.size();i++){
-            System.out.println(pcPartsDrive.get(i).getPartName() + " " + pcPartsDrive.get(i).getPerformace() + " " + pcPartsDrive.get(i).getPrice());
-        }
     }
 
-    private ArrayList<PCParts> pcPartsCPU = new ArrayList<PCParts>();
-    private ArrayList<PCParts> pcPartsGPU = new ArrayList<PCParts>();
-    private ArrayList<PCParts> pcPartsDrive = new ArrayList<PCParts>();
+    public ArrayList<PCParts> pcPartsCPU = new ArrayList<PCParts>();
+    public ArrayList<PCParts> pcPartsGPU = new ArrayList<PCParts>();
+    public ArrayList<PCParts> pcPartsDrive = new ArrayList<PCParts>();
 
     private ArrayList<String> fileLocations = new ArrayList<String>();
 
