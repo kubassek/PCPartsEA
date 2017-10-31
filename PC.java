@@ -1,6 +1,6 @@
 package com.company;
 
-public class PC {
+public class PC{
 
     public PC(PCParts cpu, PCParts gpu, PCParts drive){
 

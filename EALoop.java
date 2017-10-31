@@ -2,6 +2,8 @@ package com.company;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Random;
 
 public class EALoop {
@@ -30,6 +32,7 @@ public class EALoop {
             ArrayList<PC> children = new ArrayList<PC>();
             parents = this.selectParents();
             children = this.combineParents(parents);
+            this.repopulation(children);
         }
     }
 
@@ -94,16 +97,30 @@ public class EALoop {
     }
 
     public void repopulation(ArrayList<PC> children){
-        
+        this.sortPopulation();
+        for(int i=0;i<population.size();i++){
+            System.out.println(population.get(i).getFitness());
+        }
+    }
+
+    public void sortPopulation(){
+        Collections.sort(population, new Comparator<PC>() {
+            @Override
+            public int compare(PC o1, PC o2) {
+                if(o1.getFitness() < o2.getFitness()){
+                    return 1;
+                }
+                else if(o2.getFitness() < o1.getFitness()){
+                    return -1;
+                }
+                else return 0;
+            }
+        });
     }
 
     public PC mutate(PC childPC){
      PC mutatedPC = childPC;
 
      return mutatedPC;
-    }
-
-    public void addPCtoPop(PC pc){
-
     }
 }
